@@ -188,7 +188,7 @@ ul#menu-navigation li a {
 .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus, .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
 	color: #FFF;
 	outline: none;
-	background: #a0366b;
+	background: #da4692;
 }
 .navbar-default .navbar-nav .open .dropdown-menu>li>a{
 	text-align: center;
@@ -1006,3 +1006,6 @@ ul.no-style{
 	.post-navigation a{
 		padding: 0;
 	}
+.row-spaced {
+	padding: 40px 0;
+}

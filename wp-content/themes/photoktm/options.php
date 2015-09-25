@@ -165,5 +165,11 @@ $options[] = array(
 		'std' => 'Menu Name',
 		'type' => 'text');
 
+	/*$options[] = array(
+		'name' => __('Footer Image', 'options_check'),
+		'desc' => __('Footer image of partners, sponser.', 'options_check'),
+		'id' => 'footer-image',
+		'type' => 'upload');*/
+
 	return $options;
 }

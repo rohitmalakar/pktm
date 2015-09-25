@@ -159,6 +159,16 @@ get_header(); ?>
 	</div> <!-- /.blog-wrap -->
 	<footer>
 		<div class="container">
+			<?php 
+			$post_id = '308';
+			$footer_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), '');
+			//print_r($post_id);
+			if($footer_image != '') {
+				?>
+				<img src="<?php echo $footer_image[0];?>" alt="" class="img-responsive">
+				<?php
+			} else {
+			?>
 			<div class="row">
 				<div class="col-xs-6 col-sm-2">
 				<h6>ORGANIZERS</h6>
@@ -187,6 +197,7 @@ get_header(); ?>
 					<a href="#"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo6.png" alt=""></a>
 				</div>
 			</div> <!-- /.row -->
+			<?php } ?>
 		</div>
 	</footer>
 </div><!--./wrapper-->

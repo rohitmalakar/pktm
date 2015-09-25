@@ -8,21 +8,24 @@ get_header(); ?>
 <div class="default-page two-column">
 	<div class="page-title text-center">
 		<h3><strong><?php
-		while ( have_posts() ) : the_post();
+		//while ( have_posts() ) : the_post();
 		the_title();
-		endwhile; ?></strong></h3>
+		//endwhile; ?></strong></h3>
 	</div><!-- /.page-title -->
 	<div class="container post-container">
 		<div class="row">
 			<div class="col-sm-6">
-				<?php echo types_render_field("left-box");?>
+				<?php echo types_render_field("left-box", array());?>
 			</div> <!-- /.col-sm-6 -->
 			<div class="col-sm-6">
-				<?php echo types_render_field("right-box");?>
+				<?php echo types_render_field("right-box", array());?>
 			</div> <!-- /.col-sm-6 -->
 		</div>
 	</div> <!-- /.contianer -->
-
+	<?php 
+	$bottom_left_box = types_render_field('bottom-left-box', array());
+	$bottom_right_box = types_render_field('bottom-right-box', array());
+	?>
 	<div class="content-with-bg">
 		<div class="container">
 			<div class="row">
@@ -65,5 +68,18 @@ get_header(); ?>
 			</div> <!-- /.row -->
 		</div> <!-- /.container -->
 	</div> <!-- content-with-bg -->
+	<div class="page-title text-center">
+		<h3><strong>Things to do</strong></h3>
+	</div>
+	<div class="container post-container">
+		<div class="row">
+			<div class="col-sm-6">
+				<?php echo $bottom_left_box;?>
+			</div> <!-- /.col-sm-6 -->
+			<div class="col-sm-6">
+				<?php echo $bottom_right_box;?>
+			</div> <!-- /.col-sm-6 -->
+		</div>
+	</div> <!-- /.contianer -->
 </div><!-- /.default-page two-column -->
 <?php get_footer(); ?>

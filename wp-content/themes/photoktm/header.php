@@ -36,9 +36,9 @@
 			<div class="row">
 				<div class="social-media col-md-offset-1 col-md-3 col-lg-offset-2 col-lg-2">
 					<div class="social">
-						<a href="https://www.facebook.com/photoktm"><i class="fa fa-facebook"></i></a>
-						<a href="https://twitter.com/photoktm"><i class="fa fa-twitter"></i></a>
-						<a href="https://instagram.com/photoktm/"><i class="fa fa-instagram"></i></a>
+						<a href="https://www.facebook.com/photoktm" target="_blank"><i class="fa fa-facebook"></i></a>
+						<a href="https://twitter.com/photoktm" target="_blank"><i class="fa fa-twitter"></i></a>
+						<a href="https://instagram.com/photoktm/" target="_blank"><i class="fa fa-instagram"></i></a>
 					</div>
 				</div><!--./social-media-->
 				<div class="col-xs-5 col-sm-4">
