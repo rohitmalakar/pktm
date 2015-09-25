@@ -4,9 +4,22 @@
  **/
 
 get_header(); ?>
-<div class="featured-image banner" style="background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/artist-featured-image-2.jpg');">
-	<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/artist-featured-image.jpg" />
+
+<?php
+	while ( have_posts() ) : the_post();
+?>
+<?php 
+	$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_id()), 'large');
+	if($imgsrc[0] == null || $imgsrc[0] == '')
+		$image = '';
+	else
+		$image = $imgsrc[0];
+?>
+<div class="featured-image banner" style="background-image: url('<?php echo $image; ?>');">
+	<img src="<?php echo $image; ?>" />
 </div> <!-- /.featured-image -->
+
+<?php endwhile; ?>
 
 <div class="container exibtion-single-container">
 	<div class="row">
