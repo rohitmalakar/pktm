@@ -1,53 +1,56 @@
 <?php
 /**
  * The template for displaying search results pages.
- *
- * @package WordPress
- * @subpackage Twenty_Fifteen
- * @since Twenty Fifteen 1.0
  */
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentyfifteen' ), get_search_query() ); ?></h1>
-			</header><!-- .page-header -->
-
-			<?php
-			// Start the loop.
-			while ( have_posts() ) : the_post(); ?>
-
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1><?php printf( __( 'Search Results for: %s'), get_search_query() ); ?></h1>
 				<?php
-				/*
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'content', 'search' );
+				// Start the loop.
 
-			// End the loop.
-			endwhile;
+	    			global $query_string;
 
-			// Previous/next page navigation.
-			the_posts_pagination( array(
-				'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
-				'next_text'          => __( 'Next page', 'twentyfifteen' ),
-				'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
-			) );
+					$query_args = explode("&", $query_string);
+					$search_query = array();
 
-		// If no content, include the "No posts found" template.
-		else :
-			get_template_part( 'content', 'none' );
+					foreach($query_args as $key => $string) {
+						$query_split = explode("=", $string);
+						$search_query[$query_split[0]] = urldecode($query_split[1]);
+					} // foreach
 
-		endif;
-		?>
+					$search = new WP_Query($search_query);
 
-		</main><!-- .site-main -->
-	</section><!-- .content-area -->
+				?>
+				<?php
+					if ( have_posts() ) :
+						while ( have_posts() ) : the_post();
+							// Your loop code
+					?>
+					<div class="row">
+						<div class="col-lg-12">
+						
+							<h3><a href="<?php the_permalink();?>"><?php search_title_highlight(); ?></a></h3>
+							<p><?php search_excerpt_highlight();?></p>
+							<!-- <p><a href="<?php the_permalink();?>" class="read-more-btn">Read More</a></p>	 -->
+						</div>
+					</div>
+					<?php 
+						endwhile;
+					else :?>
+						<div class="row">
+							<div class="col-lg-12">
+								<h3><?php echo wpautop( 'Sorry, no posts were found' );?></h3>
+							</div>
+						</div>
+					<?php 
+					endif;
+					?>
+			</div>
+		</div>
+	</div> <!-- /.container -->
 
 <?php get_footer(); ?>
