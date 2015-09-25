@@ -34,7 +34,7 @@ get_header(); ?>
 							<p>
 								<i class="fa fa-calendar"></i> <?php echo types_render_field( "entry-date"); ?>
 							</p>
-							<p><i class="fa fa-user"></i> <?php echo types_render_field( "author"); ?></p>
+							
 						</div><!-- /.date-time-location -->
 						<p>
 							<a href="<?php the_permalink();?>">

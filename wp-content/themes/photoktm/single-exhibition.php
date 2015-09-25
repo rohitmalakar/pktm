@@ -50,6 +50,7 @@ get_header(); ?>
 				?>
 			<?php while ( $connected->have_posts() ) : $connected->the_post(); 
 				$artist = ($artist != '') ? $artist . ", " . get_the_title() : $artist = get_the_title();
+				$artist_url= get_permalink();
 			endwhile; ?>
 			<?php 
 			wp_reset_postdata();
@@ -60,7 +61,7 @@ get_header(); ?>
 
 			<div class="artist-name">
 				<p>
-					<a href="#">
+					<a href="<?php echo $artist_url; ?>">
 						<i class="fa fa-smile-o"></i> 
 						<span class="right-txt">
 							<strong>
@@ -101,7 +102,14 @@ get_header(); ?>
 				&q=<?php echo types_render_field('lat-lng');?>" allowfullscreen>
 			</iframe>
 		</div> <!-- /.col-sm-5 -->
-		
+		<form action="<?php echo site_url();?>/icsgen.php" method="post">
+			<input type="hidden" value="<?php echo types_render_field('startdate');?>" name="start" />
+			<input type="hidden" value="<?php echo types_render_field('enddate');?>" name="end" />
+			<input type="hidden" value="<?php echo get_the_title() . ' by ' . $artist;?>" name="title" />
+			<input type="hidden" value="<?php echo get_the_content();?>" name="description" />
+			<input type="hidden" value="<?php echo types_render_field('venue');?>" name="venue" />
+			<input type="submit" value="Add to Calender" />
+		</form>	
 	</div> <!-- /.row -->
 </div><!-- /.container -->
 
