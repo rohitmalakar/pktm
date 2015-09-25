@@ -996,6 +996,25 @@ ul.no-style{
 	    padding-top: 10px;
     	padding-bottom: 6px;
 	}
+	.two-column-post-list .col-sm-6{
+		height: 480px;
+	}
+	.two-column-post-list .col-sm-6 {
+	    overflow: hidden;
+	    height: 525px;
+	}
+}
+@media (min-width: 992px){
+	.two-column-post-list .col-sm-6 {
+	    height: 485px;
+	    overflow: hidden;
+	}
+}
+@media (min-width: 1200px){
+	.two-column-post-list .col-sm-6 {
+	    height: 485px;
+	    overflow: hidden;
+	}	
 }
 .entry-content a, .entry-summary a, .page-content a, .comment-content a, .pingback .comment-body > a {
 	border-bottom: 0;
