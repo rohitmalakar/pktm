@@ -15,7 +15,11 @@ get_header(); ?>
 		?>
 		<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 		<div>
-			<a href="<?php echo types_render_field("link");?>"><img src="<?php echo $url?>" /></a>
+		<?php 
+			$link = types_render_field("link", array("output" => "raw"));
+		?>
+
+			<a href="<?php echo $link; ?>"><img src="<?php echo $url?>" /></a>
 			<div class="caption hidden"><div class="caption-inner">CAPTION</div></div>
 		</div>		
 		<?php endwhile; ?>
@@ -133,7 +137,7 @@ get_header(); ?>
 									<a href="javascript:window.open('https://twitter.com/share?url=<?php the_permalink();?>&amp;name=Photoktm Event&amp;hashtags=photoktm','twitter_share', 'height=320, width=640, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no');"><i class="fa fa-twitter"></i></a>
 								</div>
 								<br />
-								<!-- <i class="fa fa-user"></i> <?php echo types_render_field( "author"); ?> -->
+
 							</div><!-- ./meta -->
 							<p>
 								<a href="<?php the_permalink();?>">

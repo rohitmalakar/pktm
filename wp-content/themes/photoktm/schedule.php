@@ -13,6 +13,9 @@ get_header(); ?>
 		<div class="row">
 			<div class="col-md-10 col-md-offset-1">
 				<div id="date-carousel" class="date-carousel"><!--id passed to ajax and data displayed according to the select box having same value-->
+				  <div><a id="mon-26oct" class="date-list"> MON, 26 OCT </a></div>
+				  <div><a id="tues-27oct" class="date-list"> TUES, 27 OCT </a></div>
+				  <div><a id="wed-28oct" class="date-list"> WED, 28 OCT </a></div>
 				  <div><a id="thur-29oct" class="date-list"> THUR, 29 OCT </a></div>
 				  <div><a id="fri-30oct" class="date-list" > FRI, 30 OCT </a></div>
 				  <div><a id="sat-31oct" class="date-list"> SAT, 31 OCT </a></div>
