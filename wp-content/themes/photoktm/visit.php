@@ -52,8 +52,12 @@ get_header(); ?>
 								</a>
 							</div>
 							<div class="col-xs-6">
-								<p><?php echo types_render_field('link');?><br>
-								<?php echo truncate(get_the_content()); ?></p>
+								<p><?php echo truncate(get_the_content()); ?><br>
+									<!-- <?php echo types_render_field('link');?> -->
+									<a href="<?php echo types_render_field('link', array('raw'=>'true'));?>" target="_blank">
+										<?php echo types_render_field('link', array('raw'=>'true'));?>
+									</a>
+								</p>
 							</div>
 						</div>
 				</div> <!-- /.col-sm-6 post-box -->

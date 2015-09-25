@@ -46,8 +46,8 @@ get_header(); ?>
   <script>
 
 var locations = [
-      ['Photo Kathmandu', 27.680690, 85.310459, 2],
-      ['Traditional Inn', 27.672058, 85.327153, 1]      
+      ['photo.circle', 27.680538, 85.310421, 2],
+      ['The Inn Heritage Hotel', 27.674335, 85.325969, 1]      
     ];
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), {

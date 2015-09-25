@@ -39,7 +39,7 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-sm-3 col-xs-6">
 					<div class="event-thumb" style="background-image:url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/exhibitions-home-thumb.jpg');">
-						<a href="#">
+						<a href="<?php echo site_url();?>/index.php/exhibitions/">
 							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/exhibitions-home-thumb.jpg" />
 							<span>EXHIBITIONS</span>
 						</a>
@@ -47,7 +47,7 @@ get_header(); ?>
 				</div> <!-- /.col-sm-3 -->
 				<div class="col-sm-3 col-xs-6">
 					<div class="event-thumb" style="background-image:url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/workshops.jpg');">
-						<a href="#">
+						<a href="<?php echo site_url();?>/index.php/workshops/">
 							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/workshops.jpg" />
 							<span>WORKSHOPS</span>
 						</a>
@@ -55,7 +55,7 @@ get_header(); ?>
 				</div> <!-- /.col-sm-3 -->
 				<div class="col-sm-3 col-xs-6">
 					<div class="event-thumb" style="background-image:url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/talks.jpg');">
-						<a href="#">
+						<a href="<?php echo site_url();?>/index.php/talks/">
 							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/talks.jpg" />
 							<span>TALKS</span>
 						</a>
@@ -63,7 +63,7 @@ get_header(); ?>
 				</div> <!-- /.col-sm-3 -->
 				<div class="col-sm-3 col-xs-6">
 					<div class="event-thumb" style="background-image:url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/slideshow.jpg');">
-						<a href="#">
+						<a href="<?php echo site_url();?>/index.php/slideshows/">
 							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/slideshow.jpg" />
 							<span>SLIDESHOWS</span>
 						</a>
@@ -71,7 +71,7 @@ get_header(); ?>
 				</div> <!-- /.col-sm-3 -->
 				<div class="col-sm-3 col-xs-6">
 					<div class="event-thumb" style="background-image:url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/portfolio-reviews.jpg');">
-						<a href="#">
+						<a href="<?php echo site_url();?>/index.php/portfolio-reviews/">
 							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/portfolio-reviews.jpg" />
 							<span>PORTFOLIO REVIEWS</span>
 						</a>
@@ -79,7 +79,7 @@ get_header(); ?>
 				</div> <!-- /.col-sm-3 -->
 				<div class="col-sm-3 col-xs-6">
 					<div class="event-thumb" style="background-image:url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/artist.jpg');">
-						<a href="#">
+						<a href="<?php echo site_url();?>/index.php/artists/">
 							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/artist.jpg" />
 							<span>ARTISTS</span>
 						</a>
@@ -87,7 +87,7 @@ get_header(); ?>
 				</div> <!-- /.col-sm-3 -->
 				<div class="col-sm-3 col-xs-6">
 					<div class="event-thumb" style="background-image:url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/residency.jpg');">
-						<a href="#">
+						<a href="<?php echo site_url();?>/index.php/residency/">
 							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/residency.jpg" />
 							<span>RESIDENCY</span>
 						</a>
@@ -95,7 +95,7 @@ get_header(); ?>
 				</div> <!-- /.col-sm-3 -->
 				<div class="col-sm-3 col-xs-6">
 					<div class="event-thumb" style="background-image:url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/collateral-events.jpg');">
-						<a href="#">
+						<a href="<?php echo site_url();?>/index.php/collateral-events/">
 							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/collateral-events.jpg" />
 							<span>COLLATERAL EVENTS</span>
 						</a>
@@ -107,7 +107,7 @@ get_header(); ?>
 	<div class="blog-wrap">
 		<div class="container">
 			<div class="row">	
-				<div class="col-xs-12"><h4>NEWS</h4></div>
+				<div class="col-xs-12"><h4>BLOG</h4></div>
 			</div> <!-- /.row -->
 			<div class="row">
 				<?php $args = array( 'posts_per_page' => 2, 
@@ -133,7 +133,7 @@ get_header(); ?>
 									<a href="javascript:window.open('https://twitter.com/share?url=<?php the_permalink();?>&amp;name=Photoktm Event&amp;hashtags=photoktm','twitter_share', 'height=320, width=640, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no');"><i class="fa fa-twitter"></i></a>
 								</div>
 								<br />
-								<i class="fa fa-user"></i> <?php echo types_render_field( "author"); ?>
+								<!-- <i class="fa fa-user"></i> <?php echo types_render_field( "author"); ?> -->
 							</div><!-- ./meta -->
 							<p>
 								<a href="<?php the_permalink();?>">

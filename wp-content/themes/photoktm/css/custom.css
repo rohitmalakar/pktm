@@ -18,6 +18,7 @@ a:focus, a:hover{
 	font-family: 'Poppins', sans-serif;
 	margin-top: 35px;
 	margin-bottom: 50px;
+  text-transform: uppercase;
 }
 .page-title h3 {
     text-transform: uppercase;
@@ -214,7 +215,7 @@ ul#menu-navigation li a {
 .wrapper-events{
 	width: 100%;
 	background-color:#f2f2f1;
-	padding-top: 30px;
+	padding: 30px 0;
 }
 .owl-carousel{
 }
@@ -990,6 +991,10 @@ ul.no-style{
 	    padding-top: 10px;
     	padding-bottom: 6px;
 	}
+}
+.entry-content a, .entry-summary a, .page-content a, .comment-content a, .pingback .comment-body > a {
+	border-bottom: 0;
+}
 	.navigation.post-navigation{
 		margin-top: 10px;
 		padding: 0 10%;
@@ -997,4 +1002,3 @@ ul.no-style{
 	.post-navigation a{
 		padding: 0;
 	}
-}
