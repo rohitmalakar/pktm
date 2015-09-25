@@ -1,6 +1,6 @@
 <?php
 /**
-Template Name: Visit
+* Template Name: Visit
  **/
 
 get_header(); ?>
@@ -53,14 +53,41 @@ get_header(); ?>
 								</a>
 							</div>
 							<div class="col-xs-6">
-								<p><a href="<?php echo $http_url; ?>"><?php echo types_render_field('link',array('output' => 'raw'));?></a><br>
-								<?php echo truncate(get_the_content()); ?></p>
+
+								<p><?php echo truncate(get_the_content()); ?><br>
+									<!-- <?php echo types_render_field('link');?> -->
+									<a href="<?php echo types_render_field('link', array('raw'=>'true'));?>" target="_blank">
+										<?php echo types_render_field('link', array('raw'=>'true'));?>
+									</a>
+								</p>
+
 							</div>
 						</div>
 				</div> <!-- /.col-sm-6 post-box -->
 				<?php endwhile;?>
 			</div> <!-- /.row -->
+
 		</div> <!-- /.container -->
 	</div> <!-- content-with-bg -->
+	
+	<div class="page-title text-center">
+		<h3><strong><?php
+		while ( have_posts() ) : the_post();
+		the_title();
+		endwhile; ?></strong></h3>
+	</div><!-- /.page-title -->
+	<div class="container post-container">
+		<div class="row">
+			<div class="col-sm-6">
+			asdf
+				<!-- <?php echo types_render_field("left-box");?> -->
+			</div> <!-- /.col-sm-6 -->
+			<div class="col-sm-6">
+			asdf;kj
+				<!-- <?php echo types_render_field("right-box");?> -->
+			</div> <!-- /.col-sm-6 -->
+		</div>
+	</div> <!-- /.contianer -->
+
 </div><!-- /.default-page two-column -->
 <?php get_footer(); ?>
