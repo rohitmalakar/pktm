@@ -115,7 +115,7 @@ get_header(); ?>
 			<input type="hidden" value="<?php echo types_render_field('startdate');?>" name="start" />
 			<input type="hidden" value="<?php echo types_render_field('enddate');?>" name="end" />
 			<input type="hidden" value="<?php echo get_the_title() . ' by ' . $artist;?>" name="title" />
-			<input type="hidden" value="<?php echo get_the_content();?>" name="description" />
+			<input type="hidden" value="<?php echo strip_tags(get_the_content());?>" name="description" />
 			<input type="hidden" value="<?php echo types_render_field('venue');?>" name="venue" />
 			<input type="submit" value="Add to Calender" />
 		</form>	
