@@ -1,6 +1,6 @@
 <?php
 /**
-Template Name: Visit
+* Template Name: Visit
  **/
 
 get_header(); ?>
@@ -63,7 +63,28 @@ get_header(); ?>
 				</div> <!-- /.col-sm-6 post-box -->
 				<?php endwhile;?>
 			</div> <!-- /.row -->
+
 		</div> <!-- /.container -->
 	</div> <!-- content-with-bg -->
+	
+	<div class="page-title text-center">
+		<h3><strong><?php
+		while ( have_posts() ) : the_post();
+		the_title();
+		endwhile; ?></strong></h3>
+	</div><!-- /.page-title -->
+	<div class="container post-container">
+		<div class="row">
+			<div class="col-sm-6">
+			asdf
+				<!-- <?php echo types_render_field("left-box");?> -->
+			</div> <!-- /.col-sm-6 -->
+			<div class="col-sm-6">
+			asdf;kj
+				<!-- <?php echo types_render_field("right-box");?> -->
+			</div> <!-- /.col-sm-6 -->
+		</div>
+	</div> <!-- /.contianer -->
+
 </div><!-- /.default-page two-column -->
 <?php get_footer(); ?>
