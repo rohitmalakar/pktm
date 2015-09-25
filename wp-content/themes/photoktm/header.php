@@ -34,7 +34,7 @@
 	<header class="header-top">
 		<div class="container">
 			<div class="row">
-				<div class="social-media col-sm-offset-1 col-xs-3">
+				<div class="social-media col-md-offset-1 col-md-3 col-lg-offset-2 col-lg-2">
 					<div class="social">
 						<a href="https://www.facebook.com/photoktm"><i class="fa fa-facebook"></i></a>
 						<a href="https://twitter.com/photoktm"><i class="fa fa-twitter"></i></a>
@@ -46,7 +46,7 @@
 				</div>
 				<div class="col-sm-3 col-xs-4">
 					<div class="search">
-						<form class="navbar-form navbar-left" role="search">
+						<form class="" role="search">
 							<div class="form-group">
 							<input type="text" class="form-control" placeholder="Search">
 							</div>
