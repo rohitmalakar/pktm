@@ -8,8 +8,8 @@ get_header(); ?>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<h1><?php the_title();?></h1>
-				<p>This section is under construction.</p>
+				<h3 class="text-center page-title"><?php the_title();?></h3>
+				<p class="text-center">Coming soon.</p>
 			</div>
 		</div>
 	</div> <!-- /.container -->
