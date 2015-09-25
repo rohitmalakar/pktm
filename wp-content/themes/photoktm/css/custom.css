@@ -485,6 +485,24 @@ ul#menu-navigation li a {
 	color: #232323;
 	text-decoration: none;
 }
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 47px;
+}
+.footer-full {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 47px;
+}
+
 footer{
 	background: #f9f9f8;
 	padding-top: 25px;

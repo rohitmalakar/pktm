@@ -33,7 +33,7 @@ get_header(); ?>
 					<div class="row">
 						<div class="col-lg-12">
 						
-							<h3><?php search_title_highlight(); ?></h3>
+							<h3><a href="<?php the_permalink();?>"><?php search_title_highlight(); ?></a></h3>
 							<p><?php search_excerpt_highlight();?></p>
 							<!-- <p><a href="<?php the_permalink();?>" class="read-more-btn">Read More</a></p>	 -->
 						</div>
