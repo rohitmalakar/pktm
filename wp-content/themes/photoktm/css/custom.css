@@ -632,6 +632,7 @@ h5.artist-name{
 .exibtion-single-container i{
 	color: #e6519d;
 	margin-right: 10px;
+	float: left;
 }
 .post-content{
 	margin-top: 35px;

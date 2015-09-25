@@ -82,6 +82,15 @@ get_header(); ?>
 				</p>
 			</div> <!-- /.date-time -->
 			<div class="clearfix"></div>
+			<div class="venue"> 
+				<p>
+					<i class="fa fa-map-marker"></i> 
+					<span class="right-txt">
+						<?php echo types_render_field( "venue"); ?>
+					</span>
+				</p>
+			</div> <!-- /.date-time -->
+			<div class="clearfix"></div>
 			<div class="post-content">
 				<?php the_content(); ?>
 
