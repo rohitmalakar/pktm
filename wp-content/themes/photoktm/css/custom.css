@@ -583,6 +583,9 @@ h5.artist-name{
 	-webkit-background-size: cover;
 	background-size: cover;
 }
+.single .entry-footer{
+	display: none;
+}
 .exibtion-single-container .body-title{
 	margin-top: 0;
 	text-transform: uppercase;
@@ -905,8 +908,28 @@ ul.no-style{
 	outline: none;
 	border: 2px solid #ef53a2;
 }
-
-
+.navigation.post-navigation{
+	border: none;
+	box-shadow: none;
+}
+.post-navigation .nav-previous, .post-navigation .nav-next{
+	background-image: none;
+	float: left;
+	width: 50%;
+}
+.post-navigation .nav-previous a:before, .post-navigation .nav-next a:before{
+	display: none;
+}
+.post-navigation .nav-previous .post-title, .post-navigation .nav-previous a:hover .post-title, .post-navigation .nav-previous .meta-nav, .post-navigation .nav-next .post-title, .post-navigation .nav-next a:hover .post-title, .post-navigation .nav-next .meta-nav{
+	color: #e6519d;
+	font-family: 'Poppins', sans-serif;
+}
+.post-navigation .nav-previous .post-title, .post-navigation .nav-next .post-title{
+	font-size: 12px;
+}
+.post-navigation .nav-next{
+	text-align: right;
+	}
 /*responsive*/
 @media(max-width:767px){
 	.navbar-nav>li {
@@ -918,6 +941,9 @@ ul.no-style{
 	}
 	.logo img{
 		max-width: 177px;
+	}
+	.navigation.post-navigation{
+		margin-top: 10px;
 	}
 }
 @media (min-width:768px){
@@ -946,5 +972,12 @@ ul.no-style{
 	.navbar-nav>li>a{
 	    padding-top: 10px;
     	padding-bottom: 6px;
+	}
+	.navigation.post-navigation{
+		margin-top: 10px;
+		padding: 0 10%;
+	}
+	.post-navigation a{
+		padding: 0;
 	}
 }
