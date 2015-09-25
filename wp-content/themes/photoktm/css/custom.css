@@ -603,6 +603,7 @@ h5.artist-name{
 .exibtion-single-container .right-txt{
 	display: block;
 	float: left;
+	color:#E6519D;
 }
 .exibtion-single-container .artist-name i, .exibtion-single-container .date-time i{
 	float: left;

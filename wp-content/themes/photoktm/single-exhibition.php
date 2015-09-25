@@ -37,6 +37,7 @@ get_header(); ?>
 				?>
 			<?php while ( $connected->have_posts() ) : $connected->the_post(); 
 				$artist = ($artist != '') ? $artist . ", " . get_the_title() : $artist = get_the_title();
+				$artist_url= get_permalink();
 			endwhile; ?>
 			<?php 
 			wp_reset_postdata();
@@ -47,7 +48,7 @@ get_header(); ?>
 
 			<div class="artist-name">
 				<p>
-					<a href="#">
+					<a href="<?php echo $artist_url; ?>">
 						<i class="fa fa-smile-o"></i> 
 						<span class="right-txt">
 							<strong>

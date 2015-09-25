@@ -133,7 +133,7 @@ get_header(); ?>
 									<a href="javascript:window.open('https://twitter.com/share?url=<?php the_permalink();?>&amp;name=Photoktm Event&amp;hashtags=photoktm','twitter_share', 'height=320, width=640, toolbar=no, menubar=no, scrollbars=no, resizable=no, location=no, directories=no, status=no');"><i class="fa fa-twitter"></i></a>
 								</div>
 								<br />
-								<i class="fa fa-user"></i> <?php echo types_render_field( "author"); ?>
+								
 							</div><!-- ./meta -->
 							<p>
 								<a href="<?php the_permalink();?>">

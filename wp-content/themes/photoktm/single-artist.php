@@ -101,7 +101,7 @@ get_header(); ?>
 					</div> <!-- /.car-thumb -->
 				</div> <!-- /.item -->');
 		$i++;
-		$i++;
+		
 		break;
 		case 'Talks':
 		array_push($talkAry,'<div class="item">
@@ -118,7 +118,7 @@ get_header(); ?>
 						</div> <!-- /.teaser -->
 					</div> <!-- /.car-thumb -->
 				</div> <!-- /.item -->');
-		$i++;
+
 		$i++;
 		break;
 		case 'Slideshows':
@@ -136,7 +136,7 @@ get_header(); ?>
 						</div> <!-- /.teaser -->
 					</div> <!-- /.car-thumb -->
 				</div> <!-- /.item -->');
-		$i++;
+		
 		$i++;
 		break;
 		case 'Portfolio Reviews':
@@ -154,7 +154,7 @@ get_header(); ?>
 						</div> <!-- /.teaser -->
 					</div> <!-- /.car-thumb -->
 				</div> <!-- /.item -->');
-		$i++;
+		
 		$i++;
 		break;
 		case 'Collateral Events':
@@ -172,7 +172,7 @@ get_header(); ?>
 						</div> <!-- /.teaser -->
 					</div> <!-- /.car-thumb -->
 				</div> <!-- /.item -->');
-		$i++;
+
 		$i++;
 		break;
 	}

@@ -47,12 +47,13 @@ get_header(); ?>
 					<h5><?php the_title();?></h5>
 						<div class="row">
 							<div class="col-xs-6 post-thumb">
-								<a href="<?php echo types_render_field('link',array('output' => 'raw')); ?>">
+								<?php $http_url=("http://".types_render_field('link',array('output' => 'raw')));?>
+								<a href="<?php echo $http_url; ?>">
 									<div class="img-cover-visit" style="background-image: url(<?php echo $image;?>)"></div>
 								</a>
 							</div>
 							<div class="col-xs-6">
-								<p><?php echo types_render_field('link');?><br>
+								<p><a href="<?php echo $http_url; ?>"><?php echo types_render_field('link',array('output' => 'raw'));?></a><br>
 								<?php echo truncate(get_the_content()); ?></p>
 							</div>
 						</div>
