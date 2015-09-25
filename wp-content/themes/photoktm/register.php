@@ -5,7 +5,7 @@ Template Name: Register
 
 get_header(); ?>
 <div class="wrapper">
-	<div class="full-page-content" style="background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/full-bg.jpg');">
+	<div class="" style="background-image: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/full-bg.jpg'); background-size: cover; padding-bottom: 20px;"><!--full-page-content-->
 		<div class="body-content">
 			<div class="container">
 				<div class="row">
