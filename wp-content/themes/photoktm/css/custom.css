@@ -622,6 +622,9 @@ h5.artist-name{
 .exibtion-single-container .artist-name i, .exibtion-single-container .date-time i{
 	float: left;
 }
+.exibtion-single-container .artist-name i{
+	line-height: 24px;
+}
 .exibtion-single-container i{
 	color: #e6519d;
 	margin-right: 10px;
