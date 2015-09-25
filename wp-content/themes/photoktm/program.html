@@ -1,0 +1,71 @@
+<?php
+/**
+Template Name: Programs
+ **/
+
+get_header(); ?>
+<div class="col-sm-12">
+	<h3>
+		<?php
+		while ( have_posts() ) : the_post();
+		the_title();
+		endwhile; ?>
+	</h3>
+	<div class="content col-sm-10 col-sm-offset-1">
+	<?php args = array( 'posts_per_page' => 10, 
+			'post_type' => 'artists' );
+		$postslist = new WP_Query( $args );
+		while ( $postslist->have_posts() ) : $postslist->the_post(); 
+		$imgsrc = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_id()), 'large');
+		if($imgsrc[0] == null || $imgsrc[0] == '')
+			$image = '';
+		else
+			$image = $imgsrc[0];
+		?>
+		<div class="blogpost col-sm-6">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/artist1.png" />
+			<div class="content">
+				<h4> OF MORTALS AND REMEMBRANCE</h4>
+				<span class="author">Philip Blenkinsop</span>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.
+				</p>
+				<a href="#!">MORE DETAILS</a>
+			</div>
+		</div><!--blogpost-->
+		<div class="blogpost col-sm-6">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/artist1.png" />
+			<div class="content">
+				<h4> OF MORTALS AND REMEMBRANCE</h4>
+				<span class="author">Philip Blenkinsop</span>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.
+				</p>
+				<a href="#!">MORE DETAILS</a>
+			</div>
+		</div><!--blogpost-->
+		<div class="blogpost col-sm-6">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/artist1.png" />
+			<div class="content">
+				<h4> OF MORTALS AND REMEMBRANCE</h4>
+				<span class="author">Philip Blenkinsop</span>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.
+				</p>
+				<a href="#!">MORE DETAILS</a>
+			</div>
+		</div><!--blogpost-->
+		<div class="blogpost col-sm-6">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/artist1.png" />
+			<div class="content">
+				<h4> OF MORTALS AND REMEMBRANCE</h4>
+				<span class="author">Philip Blenkinsop</span>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit.
+				</p>
+				<a href="#!">MORE DETAILS</a>
+			</div>
+		</div><!--blogpost-->
+	</div>
+</div>
+<?php get_footer(); ?>
