@@ -46,11 +46,11 @@
 				</div>
 				<div class="col-sm-3 col-xs-4">
 					<div class="search">
-						<form class="navbar-form navbar-left" role="search">
+						<form class="navbar-form navbar-left searchform" role="search" method="get" id="searchform-m" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<div class="form-group">
-							<input type="text" class="form-control" placeholder="Search">
+							<input type="text" class="form-control" placeholder="Search" value="<?php echo get_search_query(); ?>" name="s" id="s">
 							</div>
-							<button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+							<button type="submit" class="btn btn-default" id="searchsubmit" value="<?php echo esc_attr_x( 'Search', 'submit button' ); ?>"><i class="fa fa-search"></i></button>
 						</form>
 						<!-- <input type="search">
 						<a href="#"><i class="fa fa-search"></i></a> -->

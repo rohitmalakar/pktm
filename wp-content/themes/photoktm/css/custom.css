@@ -76,11 +76,8 @@ h6{
 	display: none;
 }
 .search {
-    text-align: right;
-    margin-top: 20px;
 }
 .search a{
-	color: #FFF;
 }
 
 .search .form-group {
