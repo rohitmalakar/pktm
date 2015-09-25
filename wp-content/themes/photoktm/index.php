@@ -15,7 +15,11 @@ get_header(); ?>
 		?>
 		<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
 		<div>
-			<a href="<?php echo types_render_field("link");?>"><img src="<?php echo $url?>" /></a>
+		<?php 
+			$link = types_render_field("link", array("output" => "raw"));
+		?>
+
+			<a href="<?php echo $link; ?>"><img src="<?php echo $url?>" /></a>
 			<div class="caption hidden"><div class="caption-inner">CAPTION</div></div>
 		</div>		
 		<?php endwhile; ?>
